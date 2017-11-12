@@ -1,6 +1,6 @@
 # print
 
-```:python
+```python
 print("Hello World!")
 ```
 
@@ -12,7 +12,7 @@ Hello World!
 
 # if
 
-```:python
+```python
 num = 2
 
 if num == 1:
