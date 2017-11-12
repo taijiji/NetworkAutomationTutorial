@@ -1,19 +1,19 @@
 # Check current Python version
 
 ```
-python --version
+$ python --version
 
 Python 2.7.10
 ```
 
 ```
-python2 --version
+$ python2 --version
 
 Python 2.7.14
 ```
 
 ```
-python3 --version
+$ python3 --version
 
 Python 3.6.3
 ```
@@ -30,19 +30,21 @@ https://www.python.org/downloads/
 1. Check the PATH of python/python2/python3.
 
 ```
-where python
+$ where python
 
 /usr/local/bin/python
 /usr/bin/python
 ```
 
 ```
-where python2
+$ where python2
+
 /usr/local/bin/python2
 ```
 
 ```
-where python3
+$ where python3
+
 /usr/local/bin/python3
 ```
 
