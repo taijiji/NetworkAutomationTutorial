@@ -1,15 +1,3 @@
-# print
-
-```python
-print("Hello World!")
-```
-
-```
-$ python3 print.py
-
-Hello World!
-```
-
 # if
 
 ```python
@@ -20,7 +8,7 @@ if num == 1:
 elif num == 2:
     print("num is two")
 else:
-    print("num is three")
+    print("num is other")
 ```
 
 ```
