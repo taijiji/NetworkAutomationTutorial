@@ -5,4 +5,4 @@ if num == 1:
 elif num == 2:
     print("num is two")
 else:
-    print("num is other")
+    print("num is the others")
