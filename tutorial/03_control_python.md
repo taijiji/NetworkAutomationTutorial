@@ -78,7 +78,8 @@ class Router:
         self.router["router_name"] = router_name
     
     def get_router_name(self):
-        return self.router["router_name"]
+        router_name = self.router["router_name"]
+        return router_name
         
 router_A = Router()
 router_A.set_router_name("Router A")
@@ -94,6 +95,4 @@ $ python3 class.py
 Router A
 ```
 
-# file input
-
-# file output
+# open file
