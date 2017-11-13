@@ -1,2 +1,2 @@
-Hello JANOG! from sample.txt
+Hello JANOG! from sample_read.txt
 How are you feeling?
