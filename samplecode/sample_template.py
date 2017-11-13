@@ -14,7 +14,7 @@ config_txt = template.render(
 print(config_txt)
 
 # １つのテンプレート(雛形)から複数のテキストファイルを作成する例
-interfaces= [
+interfaces = [
     {
         "if_description" : "To_RouterA",
         "if_name" : "fastethernet 1/1",
@@ -36,9 +36,5 @@ interfaces= [
 ]
 
 for interface in interfaces:
-    config_txt = template.render(
-        if_description=interface["if_description"],
-        if_name=interface["if_name"],
-        ip4=interface["ip4"],
-        ip4_subnet=interface["ip4_subnet"])
+    config_txt = template.render(interface)
     print(config_txt)
