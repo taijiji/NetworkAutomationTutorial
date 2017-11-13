@@ -1,3 +1,7 @@
-router bgp 65000
-neighbor {{ ip4 }}
-shutdown
+interface {{ if_name }}
+ description {{ if_description }}
+ ip address {{ ip4 }} {{ ip4_subnet }}
+ duplex auto
+ speed auto
+ no shutdown
+!
