@@ -12,7 +12,7 @@ else:
 ```
 
 ```
-$ python3 if.py
+$ python3 sample_if.py
 
 num is two
 ```
@@ -29,7 +29,7 @@ for name in list:
 ```
 
 ```
-$ python3 for.py
+$ python3 sample_for.py
 
 0
 1
@@ -56,7 +56,7 @@ test_function(router_list)
 ```
 
 ```
-$ python3 function.py
+$ python3 sample_function.py
 
 router_A
 router_B
@@ -90,7 +90,7 @@ print(router_name)
 ```
 
 ```
-$ python3 class.py
+$ python3 sample_class.py
 
 Router A
 ```
@@ -110,7 +110,7 @@ file2.close
 ```
 
 ```
-$ python3 file.py
+$ python3 sample_file.py
 
 Hello JANOG! from sample_read.txt
 How are you feeling?

@@ -18,7 +18,7 @@ print(type(routers_list))
 ```
 
 ```
-$ python3 example_json.py
+$ python3 sample_json.py
 
 [{'router_name': 'Router_A', 'ip': '192.168.0.1', 'os': 'junos'}, {'router_name': 'Router_B', 'ip': '192.168.0.2', 'os': 'ios'}, {'router_name': 'Router_C', 'ip': '192.168.0.3', 'os': 'iosxr'}]
 

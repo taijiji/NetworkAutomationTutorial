@@ -5,7 +5,7 @@ print("Hello World!")
 ```
 
 ```
-$ python3 print.py
+$ python3 sample_print.py
 
 Hello World!
 ```
@@ -26,7 +26,7 @@ print(c)
 ```
 
 ```
-$ python3 number.py
+$ python3 sample_number.py
 
 1
 1.1
@@ -43,7 +43,7 @@ print(d)
 ```
 
 ```
-$ python3 string.py
+$ python3 sample_string.py
 
 text
 テキスト
@@ -65,7 +65,7 @@ print(len(list))
 ```
 
 ```
-$ python3 list.py
+$ python3 sample_list.py
 
 ['router_A', 'router_B', 'router_C', 'router_D']
 router_C
@@ -86,7 +86,7 @@ print(dictionary)
 ```
 
 ```
-$ python3 dictionary.py
+$ python3 sample_dictionary.py
 
 # print(dictionary) の実行結果
 {'hostname': 'router_A', 'ip': '192.168.0.1'}
