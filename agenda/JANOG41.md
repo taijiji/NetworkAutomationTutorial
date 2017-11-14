@@ -50,3 +50,44 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
     - Textfm
     - Ansible
 - 自動化サンプルコード: BGP Peering作業を自動化する
+
+# Time Management
+- インフラ自動化のトレンド(2min)
+- 本発表のねらい(2min)
+- ネットワーク運用自動化の事例(3min)
+- ネットワーク運用自動化 失敗パターン(2min)
+- なぜPython?(1min)  
+- --- 10 min have passed ----
+
+- Python入門 おさらい(total 10min)
+  - if文(1min)
+  - for文(1min)
+  - 関数(1min)
+  - ファイル入出力(1min)
+  - テンプレートエンジン(3min)
+  - ユニットテスト(3min)  
+- --- 20 min have passed ----
+
+- やってみようネットワーク自動化(total 10min)
+  - プログラムからルータにログイン(3min)
+  - showコマンド結果を正規表現で抽出(3min)
+  - プログラムからルータにコンフィグ投入(4min)
+- --- 30 min have passed ----
+
+- 開発に便利なOSSライブラリ/ツールの紹介(total 11min)
+  - メーカー公式ライブラリ(3min)
+  - サードパーティライブラリ
+    - NAPALM(3min)
+    - Textfm(3min)
+    - Ansible(2min)
+- --- 41 min have passed ----
+
+- 自動化サンプルコード: BGP Peering作業を自動化する(total 6min)
+  - demo (2min)
+- --- 47 min have passed ----
+
+- (TBD)検証環境の構築 (total 3min)
+- --- 50 min have passed ----
+
+- Q&A, discussion (total 10min)
+- --- 60 min have passed ----
