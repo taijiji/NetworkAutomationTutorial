@@ -52,8 +52,10 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 - 自動化サンプルコード: BGP Peering作業を自動化する
 
 # Time Management
-- インフラ自動化のトレンド(2min)
-- 本発表のねらい(2min)
+- 自己紹介(1min)
+- インフラ自動化のトレンド(1min)
+- ネットワーク運用現場での声(1min)
+- 本発表のねらい(1min)
 - ネットワーク運用自動化の事例(3min)
 - ネットワーク運用自動化 失敗パターン(2min)
 - なぜPython?(1min)  
@@ -91,3 +93,16 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 
 - Q&A, discussion (total 10min)
 - --- 60 min have passed ----
+
+# TODO
+- p2「インフラ運用への要望」
+  - 課題のリストアップは妥当か
+  - 図にする(best effort)
+- p3「ネットワーク運用現場の声」
+  - 図にする
+- p4「本発表のねらい」
+  - 図にする
+  - 改善のアプローチまで記載する
+- p4「ネットワーク運用自動化の事例」
+  - 抽象的なので、表現をブラッシュアップ
+  - できればすべてに参考文献を追加したい。
