@@ -27,12 +27,30 @@ pip 9.0.1 from /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/s
 $ pip3 list
 
 Jinja2 (2.9.6)
-...
+numpy (1.13.1)
+PyYAML (3.12)
 ```
 
 # Install new package
 
 ```
 $ pip3 install jinja2
+```
+
+# Using Python Library
+
+```python
+# datetime ライブラリのインポート
+import datetime
+
+# datetimeライブラリの、datetimeクラスのnow関数を実施。
+now = datetime.datetime.now()
+print(now)
+```
+
+```
+$ python3 sample_library.py
+
+2017-11-15 14:25:56.360603
 ```
 

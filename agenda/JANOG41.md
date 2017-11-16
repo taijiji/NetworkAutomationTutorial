@@ -62,12 +62,18 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 - --- 10 min have passed ----
 
 - Python入門 おさらい(total 10min)
+  - 変数 (2分)
+   - 数値型
+   - 文字列型
+   - リスト型
+   - 辞書型
   - if文(1min)
   - for文(1min)
   - 関数(1min)
+  - クラス(1min)
   - ファイル入出力(1min)
+  - json(1min)
   - テンプレートエンジン(3min)
-  - ユニットテスト(3min)  
 - --- 20 min have passed ----
 
 - やってみようネットワーク自動化(total 10min)
