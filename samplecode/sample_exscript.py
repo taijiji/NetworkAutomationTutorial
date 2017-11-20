@@ -4,7 +4,7 @@ import Exscript
 #from Exscript.Account import Account
 
 username = 'user1'
-password = 'pass1'
+password = 'password1'
 ip4 = '192.168.33.3'
 
 # SSHセッションの確立

@@ -15,10 +15,10 @@ JUNOS Software Release 12.1X47-D15.4
 # 「()」: グループ化
 # 「.」 : 改行以外の任意の文字列1文字
 # 「+」 : 直前の正規表現に対して、１回以上の繰り返し
-regrex = "JUNOS Software Release (.+)"
+regex = "JUNOS Software Release (.+)"
 
 # show_version_txtの文字列に対して、正規表現による文字列の抽出を実行
-match = re.search(regrex, show_version_txt )
+match = re.search(regex, show_version_txt )
 
 # マッチした文字文字列全体を表示
 print(match.group(0))
