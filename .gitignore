@@ -101,6 +101,5 @@ ENV/
 .mypy_cache/
 
 # my vagrant box
-/vagrant/iosxrv
-
+vagrant/iosxrv/iosxrv-fullk9-x64.box
 
