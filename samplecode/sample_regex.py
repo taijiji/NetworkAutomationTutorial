@@ -16,6 +16,7 @@ regex = "JUNOS Software Release (.+)"
 
 # show_version_txtの文字列に対して、正規表現による文字列の抽出を実行
 match = re.search(regex, show_version_txt )
+#match = re.search("Today is (.+)" , "Today is Sunday")
 
 # マッチした文字文字列全体を表示
 print(match.group(0))

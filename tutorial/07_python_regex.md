@@ -27,7 +27,7 @@ print(match.group(1))
 ```
 
 ```
-python3 sample_regex.py
+$ python3 sample_regex.py
 
 JUNOS Software Release 12.1X47-D15.4
 12.1X47-D15.4

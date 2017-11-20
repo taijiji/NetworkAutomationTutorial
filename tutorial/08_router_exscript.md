@@ -33,14 +33,14 @@ print(result)
 
 # SSHセッションの切断
 if session:
-    session.send('exit\r')
+    session.send('exit')
     session.close()
 else:
     raise AttributeError('Cannot find a livied session')
 ```
 
 ```
-$ python3 sample_exscript.py
+$ python3 sample_exscript_show.py
 
 show configuration interfaces ge-0/0/1
 unit 0 {
