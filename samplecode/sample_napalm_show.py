@@ -10,11 +10,11 @@ device = driver(
 device.open()
 
 interface_dict = device.get_interfaces()
-pprint(interface_dict)
+#pprint(interface_dict)
 pprint(interface_dict["ge-0/0/2"])
 
 interface_ip_dict = device.get_interfaces_ip()
-pprint(interface_ip_dict)
+#pprint(interface_ip_dict)
 pprint(interface_ip_dict["ge-0/0/2.0"])
 
 device.close()
