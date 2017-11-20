@@ -1,14 +1,3 @@
-# NAPALM
-
-# Install 
-
-```
-pip3 install napalm
-```
-
-# router show interface
-
-```python
 import napalm
 from pprint import pprint
 
@@ -28,21 +17,3 @@ interface_ip_dict = device.get_interfaces_ip()
 pprint(interface_ip_dict["ge-0/0/2.0"])
 
 device.close()
-```
-
-```
-$ python3 sample_napalm.py
-
-{'description': '',
- 'is_enabled': True,
- 'is_up': True,
- 'last_flapped': 1078.0,
- 'mac_address': '08:00:27:1D:63:CE',
- 'speed': 1000}
-{'ipv4': {'192.168.33.4': {'prefix_length': 24}}}
-```
-
-# 
-
-# Reference
-https://napalm.readthedocs.io/en/latest/
