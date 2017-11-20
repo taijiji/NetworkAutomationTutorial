@@ -15,56 +15,48 @@ session.login(account)
 print("="*40)
 print("Step 1. run show command")
 print("="*40)
-session.execute("show configuration interfaces ge-0/0/1")
-result = session.response
-print(result)
+session.execute("show configuration interfaces ge-0/0/2")
+print(session.response)
+
 
 print("="*40)
-print("Step 3. run configure command")
+print("Step 2. configure")
 print("="*40)
 session.execute("configure")
 
-config_txt = "set interfaces ge-0/0/1 disable"
+config_txt = "set interfaces ge-0/0/2 disable"
 session.execute(config_txt)
-result = session.response
-print(result)
+print(session.response)
 
 print("="*40)
-print("Step 4. commit check")
+print("Step 3. commit check")
 print("="*40)
 session.execute("show | compare")
-result = session.response
-print(result)
+print(session.response)
 session.execute("commi check")
-result = session.response
-print(result)
-
+print(session.response)
 
 print("="*40)
-print("Step 5. commit")
+print("Step 4. commit")
 print("="*40)
 print("Do you commit? y/n")
-choice = raw_input().lower()
+choice = input()
 if choice == "y":
     session.execute("commit")
-    print session.response
+    print(session.response)
 else:
     session.execute("rollback")
-    print session.response
+    print(session.response)
+
 session.execute("exit")
-result = session.response
-print(result)
+print(session.response)
 
 
 print("="*40)
 print("Step 6. run show command(again)")
 print("="*40)
-session.execute("show configuration interfaces ge-0/0/1")
-result = session.response
-print(result)
+session.execute("show configuration interfaces ge-0/0/2")
+print(session.response)
 
-
-if session:
-    session.send("exit\r")
-    session.close()
-else:
+session.send("exit")
+session.close()

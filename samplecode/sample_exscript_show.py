@@ -20,7 +20,7 @@ print("="*20)
 
 # SSHセッションの切断
 if session:
-    session.send("exit\r")
+    session.send("exit")
     session.close()
 else:
     raise AttributeError("Cannot find a livied session")
