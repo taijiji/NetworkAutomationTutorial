@@ -32,7 +32,7 @@ device.close()
 ```
 
 ```
-$ python3 sample_napalm.py
+$ python3 sample_napalm_set.py
 
 {'.local.': {'description': '',
              'is_enabled': True,
@@ -177,7 +177,7 @@ $ python3 sample_napalm.py
          'is_up': True,
          'last_flapped': -1.0,
          'mac_address': 'Unspecified',
-         'speed': -1},
+         'spe{'ipv4': {'192.168.33.4': {'prefix_length': 24}}}ed': -1},
  'vlan': {'description': '',
           'is_enabled': True,
           'is_up': False,
@@ -206,7 +206,7 @@ $ python3 sample_napalm.py
                              '128.0.0.1': {'prefix_length': 32},
                              '128.0.0.6': {'prefix_length': 32}}}}
 
-{'ipv4': {'192.168.33.4': {'prefix_length': 24}}}
+
 ```
 
 # Routour Configure
@@ -252,7 +252,6 @@ print(device.get_interfaces()["ge-0/0/2"]["is_up"])
 print("Close session: ")
 device.close()
 print("OK")
-
 ```
 
 
