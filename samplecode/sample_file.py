@@ -6,7 +6,7 @@ text = file1.read() # ファイル全文を文字列として読み込み
 print(text)
 file1.close()
 
-# 上級者向け
+# 上級者向け: close文不要な記述
 # with open("sample_read.txt", "r") as file:
 #  whole_str = file.read()
 
