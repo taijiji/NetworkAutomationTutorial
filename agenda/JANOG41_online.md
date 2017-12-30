@@ -52,11 +52,11 @@ JSONの利用
 
 # TODO
 - fix: p7目次修正
-- fix: summry
+- (Done)fix: summry
 - add: Python環境構築
 - add: unittest
-- add: Next summary
+- (Done)add: Next summary
 - add: 開発Tips
-- fix: p3グラフ化
+- (Done)fix: p3グラフ化
 - fix: python3 -> python command
 - fix: pip3 -> pip command
