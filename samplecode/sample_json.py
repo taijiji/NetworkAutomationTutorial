@@ -1,6 +1,5 @@
 import json
 
-
 file = open("sample_json.json", "r")
 
 # fileオブジェクトからjsonを読み込み、変数に格納
@@ -14,3 +13,4 @@ routers_list = json.load(file)
 
 print(routers_list)
 print(type(routers_list))
+print(routers_list[0]["ip"])
