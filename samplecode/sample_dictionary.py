@@ -2,13 +2,18 @@
 router_info = {
     "hostname"  : "router_A",
     "os"        : "junos",
-    "ip"        : "192.168.0.1" 
+    "version"   : "15.1",
+    "ip"        : "192.168.0.1",
 }
 
 print(router_info) # 辞書型変数を表示
 
-# 「key」が "hostname" の場合の、「value」を表示
+# ホスト名を表示
 print(router_info["hostname"]) 
+
+# バージョンを表示
+print(router_info["version"]) 
+
 
 #　「key」が"ip"の場合の、「value」を別の値に変更
 router_info["ip"] = "192.168.0.2"
