@@ -1,9 +1,21 @@
 # 関数の定義
-# ルータ名の配列を受けとり、表示させる関数
-def test_function(router_list):
-    for router_name in router_list:
-        print(router_name)
+# ルータ情報を受けとり、OSに応じたshow bgp summaryコマンドを返すコマンド
+def get_show_bgp_summary_command(router_info):
+    if router_info["os"] == "junos":
+        command = "show bgp summary"
+    elif router_info['os'] == 'ios':
+        command = "show ip bgp summary"
+    else:
+        command = 'N/A'
+    return command
 
-router_list = ['router_A', 'router_B', 'router_C', 'router_D']
-# 関数の呼び出し
-test_function(router_list)
+# 辞書型変数
+router_info = {
+    "hostname"  : "router_A",
+    "os"        : "junos",
+    "version"   : "15.1"
+}
+
+# router_infoを引数として、関数を呼び出し
+command = get_show_bgp_summary_command(router_info)
+print(command)
