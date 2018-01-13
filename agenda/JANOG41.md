@@ -10,6 +10,10 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 - 60 minites, include 10 minitues discussion time
 
 # Abstruct
+## English
+
+
+## Japanese
 インフラ運用の自動化は、アプリケーション開発やサーバ運用だけでなく、
 ネットワーク運用現場においても求められるようになってきました。  
 しかし実際のネットワーク運用現場からは  
@@ -21,13 +25,21 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 開発に役立つOSSライブラリ、サンプルコードを共有することで、皆様の職場のネットワーク運用業務を改善するきっかけに
 していただきたいです。
 
-# Target Persons
+# Target Audience
+## Engilish
+- Person who interested in the development for Network Automation.
+- Network engineer and beginner at programming
+- Exective and team leader who consider for tackleing the development of Network Automation as a business issue.
+
+## Japanese
 - ネットワーク運用の自動化開発に興味のある方、挑戦してみたい方
 - 開発経験の無いネットワークエンジニアの方、プログラミング初心者の方 
   (ただし発表時間の都合上、プログラミング基礎解説は最小限に留めます)
 - 経営課題としてネットワーク運用自動化に取り組むべきか悩んでいる運用リーダーの方、管理職の方
 
 # Table of Contents
+## English
+## Japanese
 本発表では、プログラミング言語としてPython(3系)を例にして進めます。
 - インフラ自動化のトレンド
 - ネットワーク運用自動化の事例
