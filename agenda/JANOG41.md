@@ -3,6 +3,10 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 - https://www.janog.gr.jp/meeting/janog41/
 
 # Title
+## English
+Network Automation to get started from tomorrow
+
+## Japanese
 明日からはじめるネットワーク運用自動化
 
 # Schedule
@@ -11,7 +15,18 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 
 # Abstruct
 ## English
+Currently, Automation of infrastructure operation is desired from also network engineering team,
+as with server engineering team and software engineering team.
 
+However Network engineers has some issue as follows;
+- No people who can develop software in Network engineering team.
+- No enough skill set and knowledge to develop software for automation.
+- No support and understanding of their company/organization for automation
+
+To get network engineers started to develop network automation from tomorrow, 
+this presentation share practical technique of programming, useful Open sourced software library and many sample codes.
+
+We hope that presentation happen to improve your network operation work.
 
 ## Japanese
 インフラ運用の自動化は、アプリケーション開発やサーバ運用だけでなく、
@@ -28,8 +43,8 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 # Target Audience
 ## Engilish
 - Person who interested in the development for Network Automation.
-- Network engineer and beginner at programming
-- Exective and team leader who consider for tackleing the development of Network Automation as a business issue.
+- A network engineer, or beginner at programming
+- Exective or network team leader who consider for tackleing the development of Network Automation as a business issue.
 
 ## Japanese
 - ネットワーク運用の自動化開発に興味のある方、挑戦してみたい方
