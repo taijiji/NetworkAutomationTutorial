@@ -52,11 +52,53 @@ root@vsrx> show version
 Hostname: vsrx
 Model: firefly-perimeter
 JUNOS Software Release [12.1X47-D15.4]
+
+root@vsrx> 
+root@vsrx> show interfaces terse
+Interface               Admin Link Proto    Local                 Remote
+ge-0/0/0                up    up
+ge-0/0/0.0              up    up   inet     10.0.2.15/24
+gr-0/0/0                up    up
+ip-0/0/0                up    up
+lsq-0/0/0               up    up
+lt-0/0/0                up    up
+mt-0/0/0                up    up
+sp-0/0/0                up    up
+sp-0/0/0.0              up    up   inet
+                                   inet6
+sp-0/0/0.16383          up    up   inet     10.0.0.1            --> 10.0.0.16
+                                            10.0.0.6            --> 0/0
+                                            128.0.0.1           --> 128.0.1.16
+                                            128.0.0.6           --> 0/0
+ge-0/0/1                up    up
+ge-0/0/1.0              up    up   inet     10.0.1.1/24
+dsc                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+lo0                     up    up
+lo0.16384               up    up   inet     127.0.0.1           --> 0/0
+lo0.16385               up    up   inet     10.0.0.1            --> 0/0
+                                            10.0.0.16           --> 0/0
+                                            128.0.0.1           --> 0/0
+                                            128.0.0.4           --> 0/0
+                                            128.0.1.16          --> 0/0
+lo0.32768               up    up
+lsi                     up    up
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+pp0                     up    up
+ppd0                    up    up
+ppe0                    up    up
+st0                     up    up
+tap                     up    up
+vlan                    up    down
 ```
 
 ## IOSXRv router
 ```
-ssh -p 2223 vagrant@localhost
+$ ssh -p 2223 vagrant@localhost
 
 Password: vagrant # default
 
@@ -78,7 +120,40 @@ Build Information:
 
 cisco IOS XRv x64 () processor
 System uptime is 8 minutes
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show ipv4 interface brief
+
+Tue Jan 16 19:49:58.980 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+GigabitEthernet0/0/0/0         unassigned      Shutdown        Down     default
+MgmtEth0/RP0/CPU0/0            10.0.2.15       Up              Up       default
 ```
+
+# add configuration for general use
+
+## vSRX
+
+```
+edit
+
+set system root-authentication plain-text-password
+set system login user user1 class super-user
+set system login user user1 authentication plain-text-password
+
+set security zones security-zone trust interfaces ge-0/0/1
+set security zones security-zone trust interfaces ge-0/0/1.0 host-inbound-traffic system-services all
+set system time-zone Asia/Tokyo
+
+set system services netconf ssh
+
+delete security policies
+set security forwarding-options family mpls mode packet-based
+set security forwarding-options family inet6 mode packet-based
+```
+
 
 # Reference
 ## English article
