@@ -4,7 +4,7 @@ JApan Network Operators' Group: the largest conference for Network Operators in 
 
 # Title
 ## English
-Network Automation to get started from tomorrow
+Let's get started Network Automation from tomorrow!
 
 ## Japanese
 明日からはじめるネットワーク運用自動化
@@ -21,7 +21,7 @@ as with server engineering team and software engineering team.
 However Network engineers has some issue as follows;
 - No people who can develop software in Network engineering team.
 - No enough skill set and knowledge to develop software for automation.
-- No support and understanding of their company/organization for automation
+- No support and understanding for automation from their company/organization.
 
 To get network engineers started to develop network automation from tomorrow, 
 this presentation share practical technique of programming, useful Open sourced software library and many sample codes.

@@ -1,4 +1,5 @@
-# Prepare for IOSXRv
+# Prepare
+## IOSXRv
 You can get CCO ID and API Key
 - https://xrdocs.github.io/getting-started/steps-download-iosxr-vagrant
 
@@ -9,6 +10,45 @@ $ BOXURL="https://devhub.cisco.com/artifactory/appdevci-release/XRv64/6.1.2/iosx
 $ curl -u your-cco-id:API-KEY $BOXURL --output ~/iosxrv-fullk9-x64.box
 
 $ vagrant box add --name IOS-XRv ~/iosxrv-fullk9-x64.box
+```
+
+
+## vEOS
+Download vEOS-lab-4.20.1F-virtualbox.box
+- https://www.arista.com/en/support/software-download
+
+```
+$ vagrant box add --name vEOS vEOS-lab-4.20.1F-virtualbox.box
+```
+
+```
+$ vagrant box list
+
+CumulusCommunity/cumulus-vx          (virtualbox, 3.4.3)
+IOS-XRv                              (virtualbox, 0)
+juniper/ffp-12.1X47-D15.4-packetmode (virtualbox, 0.5.0)
+vEOS                                 (virtualbox, 0)
+```
+
+```
+$ vagrant init
+```
+
+```
+$ vi Vagrantfile
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define :iosxrv1 do |veos1|
+    voes1.vm.box = "vEOS"
+  end
+end
+```
+
+```
+vagrant up
 ```
 
 # How to build
@@ -130,6 +170,33 @@ Tue Jan 16 19:49:58.980 UTC
 Interface                      IP-Address      Status          Protocol Vrf-Name
 GigabitEthernet0/0/0/0         unassigned      Shutdown        Down     default
 MgmtEth0/RP0/CPU0/0            10.0.2.15       Up              Up       default
+```
+
+## vEOS
+
+```
+$ vagrant ssh veos
+
+-bash-4.3#
+
+-bash-4.3# FastCli
+
+localhost>
+
+localhost>show version
+Arista vEOS
+Hardware version:
+Serial number:
+System MAC address:  0800.273e.22fd
+
+Software image version: 4.20.1F
+Architecture:           i386
+Internal build version: 4.20.1F-6820520.4201F
+Internal build ID:      790a11e8-5aaf-4be7-a11a-e61795d05b91
+
+Uptime:                 3 minutes
+Total memory:           2017324 kB
+Free memory:            1260716 kB
 ```
 
 # add configuration for general use
