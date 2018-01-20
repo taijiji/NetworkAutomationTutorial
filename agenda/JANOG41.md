@@ -15,18 +15,16 @@ Let's get started Network Automation from tomorrow!
 
 # Abstruct
 ## English
-Currently, Automation of infrastructure operation is desired from also network engineering team,
-as with server engineering team and software engineering team.
+Automation for infrastructure operation is getting desired from also network operation, as with server operation and software development.
 
-However Network engineers has some issue as follows;
-- No people who can develop software in Network engineering team.
-- No enough skill set and knowledge to develop software for automation.
-- No support and understanding for automation from their company/organization.
+However, Network Engineering Team is worried about some issues as follows;
+- No people who can develop software in Network Engineering Team.
+- No enough skill sets and knowledge to develop software for Automation.
+- No support and understanding for Automation from the organization.
 
-To get network engineers started to develop network automation from tomorrow, 
-this presentation share practical technique of programming, useful Open sourced software library and many sample codes.
+To get started to develop Network Automation from tomorrow, this presentation shares some practical technique of programming, some useful library for developing,  and many sample codes.
 
-We hope that presentation happen to improve your network operation work.
+I hope this presentation has taken you one step closer to improve your network operation work.
 
 ## Japanese
 インフラ運用の自動化は、アプリケーション開発やサーバ運用だけでなく、
@@ -42,9 +40,9 @@ We hope that presentation happen to improve your network operation work.
 
 # Target Audience
 ## Engilish
-- Person who interested in the development for Network Automation.
-- A network engineer, or beginner at programming
-- Exective or network team leader who consider for tackleing the development of Network Automation as a business issue.
+- People who interested in development for Network Automation.
+- Network Engineer, or Beginner at programming
+- Executive or Team Leader who consider for tackling  Network Automation as a business issue.
 
 ## Japanese
 - ネットワーク運用の自動化開発に興味のある方、挑戦してみたい方
@@ -54,6 +52,36 @@ We hope that presentation happen to improve your network operation work.
 
 # Table of Contents
 ## English
+- Trends of Automation for Infrastructure Automation
+- Case studies of Network Automation
+- How to fail at Network Automation
+- Why Python?
+- Python Tutorial
+  - Variables
+    - Number
+    - String
+    - list
+    - dictionary
+  - If
+  - For
+  - Function
+  - Class
+  - File read/write
+  - Use library
+  - UnitTest
+  - JSON
+  - Template Engine
+  - Regular Expression
+- Try writing a code of Network Automatoin
+  - Login a router from program
+  - Extract the result of "show command" using a regular expression.
+  - Configure a router from program
+- Open Sourced Library for Network Automation
+  - Vendor official library
+  - Third party library
+- Sample code for Network Automation: BGP Peering
+
+
 ## Japanese
 本発表では、プログラミング言語としてPython(3系)を例にして進めます。
 - インフラ自動化のトレンド
@@ -61,11 +89,19 @@ We hope that presentation happen to improve your network operation work.
 - ネットワーク運用自動化 失敗パターン
 - なぜPython?
 - Python入門 おさらい
-  - if文
-  - for文
-  - 関数
-  - ファイル入出力
-  - テンプレートエンジン
+  - 変数
+    - 数値型
+    - 文字列型
+    - リスト型
+    - 辞書型
+- if: 条件分岐処理
+- for: 繰り返し処理
+- 関数
+- クラス
+- ファイル入出力
+- テスト
+- ライブラリの利用
+- JSONの利用
 - やってみようネットワーク自動化
   - プログラムからルータにログイン
   - showコマンド結果を正規表現で抽出
@@ -73,9 +109,6 @@ We hope that presentation happen to improve your network operation work.
 - 開発に便利なOSSライブラリ/ツールの紹介
   - メーカー公式ライブラリ
   - サードパーティライブラリ
-    - NAPALM
-    - Textfm
-    - Ansible
 - 自動化サンプルコード: BGP Peering作業を自動化する
 
 # Time Management
