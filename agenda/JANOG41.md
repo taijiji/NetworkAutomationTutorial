@@ -22,7 +22,7 @@ However, Network Engineering Team is worried about some issues as follows;
 - No enough skill sets and knowledge to develop software for Automation.
 - No support and understanding for Automation from the organization.
 
-To get started to develop Network Automation from tomorrow, this presentation shares some practical technique of programming, some useful library for developing,  and many sample codes.
+To get started to develop Network Automation from tomorrow, this presentation introduces some practical technique of programming, some useful library, and many sample codes.
 
 I hope this presentation has taken you one step closer to improve your network operation work.
 
@@ -42,7 +42,7 @@ I hope this presentation has taken you one step closer to improve your network o
 ## Engilish
 - People who interested in development for Network Automation.
 - Network Engineer, or Beginner at programming
-- Executive or Team Leader who consider for tackling  Network Automation as a business issue.
+- Executive or Team Leader who consider for tackling Network Automation as a business issue.
 
 ## Japanese
 - ネットワーク運用の自動化開発に興味のある方、挑戦してみたい方
@@ -72,7 +72,7 @@ I hope this presentation has taken you one step closer to improve your network o
   - JSON
   - Template Engine
   - Regular Expression
-- Try writing a code of Network Automatoin
+- Try writing a code of Network Automation
   - Login a router from program
   - Extract the result of "show command" using a regular expression.
   - Configure a router from program
