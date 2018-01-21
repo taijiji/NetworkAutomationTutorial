@@ -36,7 +36,8 @@ device.close()
 ```
 
 ```
-python3 sample_napalm_show.py
+$ python3 sample_napalm_show.py
+
 {'fqdn': 'vsrx',
  'hostname': 'vsrx',
  'interface_list': ['ge-0/0/0',
@@ -76,8 +77,13 @@ python3 sample_napalm_show.py
 # Routour Configure
 
 ```python
+# For NAPALM
 import napalm
-from pprint import pprint
+# For Color Font
+from colorama import init as colorama_init
+from colorama import Fore
+
+colorama_init(autoreset=True)
 
 driver = napalm.get_network_driver("junos")
 device = driver(
@@ -85,58 +91,63 @@ device = driver(
     username="user1",
     password="password1" )
 
-print("Open session: ")
 device.open()
-print("OK")
 
-print("Interface ge-0/0/2 Status:  ") 
-print(device.get_interfaces()["ge-0/0/2"]["is_up"])
+print("===== Step 1. run show command =====")
+print("Interface Status:  ", end="") 
+if device.get_interfaces()["ge-0/0/1"]["is_up"] == True:
+    status_before = "up"
+elif device.get_interfaces()["ge-0/0/1"]["is_up"] == False:
+    status_before = "down"
+print(Fore.YELLOW + status_before)
 
-print("Config load (merge mode): ")
+print("===== Step 2. configure =====")
 device.load_merge_candidate(filename="./sample_config_junos.txt")
 print("OK")
 
-print("Compare config: ")
-print(device.compare_config())
+print("===== Step 3. compare configuration =====")
+print(Fore.YELLOW + device.compare_config())
 
+print("===== Step 4. commit =====")
 print("Do you commit? y/n")
 choice = input()
 if choice == "y":
-    print("Commit config:")
+    print("Commit config: ", end="")
     device.commit_config()
     print("OK")
 else:
-    print("Discard config:")
+    print("Discard config: ", end="")
     device.discard_config()
     print("OK")
 
-print("Interface ge-0/0/2 Status:  ") 
-print(device.get_interfaces()["ge-0/0/2"]["is_up"])
+print("===== Step 5. run show command(again) =====")
+print("Interface Status:  ", end="") 
+if device.get_interfaces()["ge-0/0/1"]["is_up"] == True:
+    status_after = "up"
+elif device.get_interfaces()["ge-0/0/1"]["is_up"] == False:
+    status_after = "down"
+print(Fore.YELLOW + status_after)
 
-print("Close session: ")
 device.close()
-print("OK")
 ```
 
 
-```
-Open session:
+``` 
+$ python3 sample_napalm_set.py
+
+===== Step 1. run show command =====
+Interface Status:  up
+===== Step 2. configure =====
 OK
-Interface ge-0/0/2 Status:
-True
-Config load (merge mode):
-OK
-Compare config:
-[edit interfaces ge-0/0/2]
+===== Step 3. compare configuration =====
+[edit interfaces ge-0/0/1]
 +   disable;
+===== Step 4. commit =====
 Do you commit? y/n
-y
-Commit config:
-OK
-Interface ge-0/0/2 Status:
-True
-Close session:
-OK
+n
+Discard config: OK
+===== Step 5. run show command(again) =====
+Interface Status:  up
 ```
 
 # Reference
