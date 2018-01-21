@@ -12,11 +12,12 @@ pip3 install exscript
 # Router show
 
 ```python
-import Exscript
+import Exscript # SSHライブラリ
+import re       # 正規表現ライブラリ
 
-username = 'user1'
-password = 'password1'
-ip4 = '192.168.33.3'
+username = "user1"
+password = "password1"
+ip4 = "192.168.33.3"
 
 # SSHセッションの確立
 session = Exscript.protocols.SSH2()
@@ -27,27 +28,31 @@ account = Exscript.Account(name=username, password=password)
 session.login(account)
 
 # ルータにコマンドを送信、出力結果を取得
-session.execute('show configuration interfaces ge-0/0/1')
+session.execute("show version")
 result = session.response
 print(result)
+print("----------")
+
+# 正規表現で情報抽出
+regex = "JUNOS Software Release \[(.+)\]"
+match = re.search(regex, result)
+version = match.group(1)
+print(version)
 
 # SSHセッションの切断
-if session:
-    session.send('exit')
-    session.close()
-else:
-    raise AttributeError('Cannot find a livied session')
+session.send("exit")
+session.close()
 ```
 
 ```
 $ python3 sample_exscript_show.py
 
-show configuration interfaces ge-0/0/1
-unit 0 {
-    family inet {
-        address 192.168.33.3/24;
-    }
-}
+show version
+Hostname: vsrx
+Model: firefly-perimeter
+JUNOS Software Release [12.1X47-D15.4]
+----------
+12.1X47-D15.4
 ```
 
 # Router set configure
