@@ -59,7 +59,13 @@ JUNOS Software Release [12.1X47-D15.4]
 
 ```python
 
+# For SSH
 import Exscript
+# For Color Font
+from colorama import init as colorama_init
+from colorama import Fore
+
+colorama_init(autoreset=True)
 
 username = "user1"
 password = "password1"
@@ -73,34 +79,26 @@ session.connect(ip4)
 account = Exscript.Account(name=username, password=password)
 session.login(account)
 
-print("="*40)
-print("Step 1. run show command")
-print("="*40)
-session.execute("show configuration interfaces ge-0/0/2")
-print(session.response)
+print("===== Step 1. run show command =====")
+session.execute("show configuration interfaces ge-0/0/1")
+print(Fore.YELLOW + session.response)
 
-
-print("="*40)
-print("Step 2. configure")
-print("="*40)
+print("===== Step 2. configure =====")
 session.execute("configure")
 
-config_txt = "set interfaces ge-0/0/2 disable"
+config_txt = "set interfaces ge-0/0/1 disable"
 session.execute(config_txt)
-print(session.response)
+print(Fore.YELLOW + session.response)
 
-print("="*40)
-print("Step 3. commit check")
-print("="*40)
+print("===== Step 3. commit check =====")
 session.execute("show | compare")
-print(session.response)
-session.execute("commi check")
+print(Fore.YELLOW + session.response)
+session.execute("commit check")
 print(session.response)
 
-print("="*40)
-print("Step 4. commit")
-print("="*40)
-print("Do you commit? y/n")
+print("===== Step 4. commit =====")
+# ユーザにy or nを質問
+print(Fore.YELLOW + "Do you commit? y/n")
 choice = input()
 if choice == "y":
     session.execute("commit")
@@ -112,57 +110,46 @@ else:
 session.execute("exit")
 print(session.response)
 
+print("===== Step 5. run show command(again) =====")
+session.execute("show configuration interfaces ge-0/0/1")
+print(Fore.YELLOW + session.response)
 
-print("="*40)
-print("Step 6. run show command(again)")
-print("="*40)
-session.execute("show configuration interfaces ge-0/0/2")
-print(session.response)
-
-session.send("exit\r")
+session.send("exit")
 session.close()
 ```
 
 
 ```
 $ python3 sample_exscript_set.py
-========================================
-Step 1. run show command
-========================================
-show configuration interfaces ge-0/0/2
+
+===== Step 1. run show command =====
+show configuration interfaces ge-0/0/1
 unit 0 {
     family inet {
-        address 192.168.33.4/24;
+        address 10.0.1.1/24;
     }
 }
-========================================
-Step 2. configure
-========================================
-set interfaces ge-0/0/2 disable
-========================================
-Step 3. commit check
-========================================
+===== Step 2. configure =====
+set interfaces ge-0/0/1 disable
+===== Step 3. commit check =====
 show | compare
-[edit interfaces ge-0/0/2]
+[edit interfaces ge-0/0/1]
 +   disable;
 commit check
 configuration check succeeds
-========================================
-Step 4. commit
-========================================
+===== Step 4. commit =====
 Do you commit? y/n
-n
-rollback
-load complete
+y
+commit
+commit complete
 exit
 Exiting configuration mode
-========================================
-Step 6. run show command(again)
-========================================
-show configuration interfaces ge-0/0/2
+===== Step 5. run show command(again) =====
+show configuration interfaces ge-0/0/1
+disable;
 unit 0 {
     family inet {
-        address 192.168.33.4/24;
+        address 10.0.1.1/24;
     }
 }
 ```
