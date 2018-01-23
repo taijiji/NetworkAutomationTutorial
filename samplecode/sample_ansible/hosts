@@ -1,0 +1,6 @@
+[vsrx1]
+192.168.33.3
+
+[vsrx1:vars]
+ansible_ssh_user=user1
+ansible_ssh_pass=password1

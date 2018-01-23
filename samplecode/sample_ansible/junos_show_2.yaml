@@ -1,0 +1,11 @@
+- hosts: vsrx1
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: send command "show version"
+      junos_command:
+        commands: show version
+      register: result # コマンド結果を"result"として保有
+
+    - name: show result of "show version"
+      debug: var=result.stdout_lines

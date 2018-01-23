@@ -1,0 +1,15 @@
+- hosts: vsrx1
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Get basic information
+      junos_facts: #機器情報を取得。以降のdebugで表示。
+
+    - name: show model name
+      debug: var=ansible_net_model
+
+    - name: show serial number
+      debug: var=ansible_net_serialnum
+
+    - name: show version
+      debug: var=ansible_net_version
