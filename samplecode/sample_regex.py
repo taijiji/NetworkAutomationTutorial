@@ -20,5 +20,6 @@ match = re.search(regex, show_version_txt )
 
 # マッチした文字文字列全体を表示
 print(match.group(0))
+print("--------------------")
 # マッチした文字列のうちグループ化された部分を抽出
 print(match.group(1))

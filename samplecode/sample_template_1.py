@@ -3,8 +3,8 @@ import jinja2
 # ファイルの読み込み
 file = open("sample_template.jinja2", "r")
 template_txt = file.read()
-print(template_txt)
-print("-----------------------------------")
+#print(template_txt)
+#print("-----------------------------------")
 
 # １つのテンプレート(雛形)から１つのテキストファイルを作成する例
 # テンプレートオブジェクトの作成
