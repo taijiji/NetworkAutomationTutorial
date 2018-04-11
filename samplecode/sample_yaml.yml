@@ -1,0 +1,12 @@
+host_info:
+  mgnt_ipaddress: 192.168.33.3
+  hostname: vsrx1
+  os : junos
+  username: user1
+  password: password1
+
+if_info:
+  if_name: ge-0/0/2
+  if_address_ipv4: 192.168.35.1
+  if_subnet_ipv4: 30
+  if_description: AS65002_peer

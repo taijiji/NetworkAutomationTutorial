@@ -2,18 +2,8 @@
   connection: local
   gather_facts: no
   tasks:
-
-    - name: Commit vsrx1
+    - name: Load and commit vsrx1
       junos_config:
-        lines:
-          - set interfaces ge-0/0/2 disable
-        src_format: set
-        # provider: "{{ netconf }}"
-
-#    - name: send command "show configuration interface ge-0/0/2"
-#      junos_command:
-#        commands: show configuration interfaces ge-0/0/2
-#      register: result # コマンド結果を"result"として保有
-
-#    - name: show result of "show configuration interface ge-0/0/2"
-#      debug: var=result.stdout_lines
+        src: sample_config_junos.txt
+        comment: update config
+        provider: "{{ netconf }}"

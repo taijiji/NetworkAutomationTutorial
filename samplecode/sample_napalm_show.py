@@ -14,11 +14,14 @@ device = driver(
 device.open()
 
 # 基本情報の取得
-fact = device.get_facts()
-pprint(fact) # pprint: 辞書型変数を人に見やすく表示
+#fact = device.get_facts()
+#pprint(fact) # pprint: 辞書型変数を人に見やすく表示
 
-print("----------")
+#print("----------")
 
 # バージョンの取得(基本情報から抽出)
-print(fact["os_version"])
+#print(fact["os_version"])
+
+print(device.get_interfaces()["ge-0/0/0"]["is_up"])
+
 device.close()
