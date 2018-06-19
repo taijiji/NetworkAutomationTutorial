@@ -22,7 +22,7 @@
   - [Jinja2形式テンプレートファイル](./sample_template.jinja2)
 - [正規表現](./sample_regex.py)
 - [ユニットテスト](./tests/test_sample_unittest.py)
-  - [テスト対象ファイル](./sample_unittest.py)
+  - [テスト対象ファイル](./sample_unittest.py)
 - [SSHライブラリによるネットワーク装置の情報取得](./sample_exscript_show.py)
 - [SSHライブラリによるネットワーク装置のコンフィグ投入](./sample_exscript_set.py)
 - [NAPALMライブラリによるネットワーク装置の情報取得](./sample_napalm_show.py)
